@@ -5,9 +5,9 @@ actual GitHub username and repo name once you've created the repo.
 
 ## CRC-8 Serial LFSR
 
-[![GDS](https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/actions/workflows/gds.yaml/badge.svg)](https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/actions/workflows/gds.yaml)
-[![Docs](https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/actions/workflows/docs.yaml/badge.svg)](https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/actions/workflows/docs.yaml)
-[![Test](https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/actions/workflows/test.yaml/badge.svg)](https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/actions/workflows/test.yaml)
+[![GDS](https://github.com/mena-emil/tt-crc8-lfsr/actions/workflows/gds.yaml/badge.svg)](https://github.com/mena-emil/tt-crc8-lfsr/actions/workflows/gds.yaml)
+[![Docs](https://github.com/mena-emil/tt-crc8-lfsr/actions/workflows/docs.yaml/badge.svg)](https://github.com/mena-emil/tt-crc8-lfsr/actions/workflows/docs.yaml)
+[![Test](https://github.com/mena-emil/tt-crc8-lfsr/actions/workflows/test.yaml/badge.svg)](https://github.com/mena-emil/tt-crc8-lfsr/actions/workflows/test.yaml)
 
 A Tiny Tapeout project implementing an 8-bit **Linear Feedback Shift
 Register (LFSR)** used as a serial **CRC-8** generator/checker, seeded
