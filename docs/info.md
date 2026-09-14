@@ -1,20 +1,36 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+This is an 8-bit **Linear Feedback Shift Register (LFSR)** used as a serial
+**CRC-8** generator/checker. The register (`R7..R0`) is seeded with `8'hD8`
+on reset, with two internal XOR feedback taps (between `R7`/`R6` and
+`R3`/`R2`). The feedback signal is `Feedback = DATA_in ^ R0`.
+
+While `ui_in[1]` (ACTIVE) is high, one bit of `ui_in[0]` (DATA) is shifted
+in per clock, LSB first, XORed into the feedback path. After 8 clocks (one
+full byte), the register holds the CRC remainder.
+
+Once ACTIVE drops low, the register shifts itself out serially for 8
+clocks — `R0` first — while `uo_out[1]` (Valid) is held high on `uo_out[0]`
+(CRC). Valid drops low again once all 8 bits have been shifted out.
 
 ## How to test
 
-Explain how to use your project
+The automated Cocotb test is in `test/test.py`. From the `test` directory
+run:
+
+```
+make
+```
+
+The test replays the same 10 test cases used in the original assignment
+testbench (`DATA_h.txt` / `Expec_Out_h.txt`): for each byte, it resets the
+design, shifts the data byte in LSB-first while ACTIVE is held high, waits
+for Valid, and checks the 8 CRC bits shifted out against the expected
+value.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None. This project uses only the TinyTapeout dedicated I/O pins
+(`ui_in[0]`, `ui_in[1]`, `uo_out[0]`, `uo_out[1]`) — no PMOD, display, or
+other external hardware is required, either in simulation or on the
+fabricated chip.
