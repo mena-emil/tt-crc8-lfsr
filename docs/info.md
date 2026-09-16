@@ -22,11 +22,10 @@ run:
 make
 ```
 
-The test replays the same 10 test cases used in the original assignment
-testbench (`DATA_h.txt` / `Expec_Out_h.txt`): for each byte, it resets the
-design, shifts the data byte in LSB-first while ACTIVE is held high, waits
-for Valid, and checks the 8 CRC bits shifted out against the expected
-value.
+The test runs the 10 test cases from DATA_h.txt and Expec_Out_h.txt. For 
+each byte, it resets the design, shifts the data byte in LSB-first while 
+holding ACTIVE high, waits for Valid, and checks the 8 output CRC bits 
+against the expected value.
 
 ## External hardware
 
