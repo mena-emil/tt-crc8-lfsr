@@ -141,9 +141,12 @@ PDK. GDS, gate-level test, and all Tiny Tapeout prechecks passed:
 | Analog pin check                       | ✅     |
 | Verilog syntax check                   | ✅     |
 
-| Metric      | Value |
-| ----------- | ----- |
-| Tile size   | 1x1   |
+| Metric                           | Value        |
+| -------------------------------- | ------------ |
+| Routing utilization              | 4.535 %      |
+| Standard cells (excl. fill/tap)  | 88           |
+| Routed wire length               | 2034         |
+| Tile size                        | 1x1          |
 
 ![Chip layout](images/gds_layout.png)
 
@@ -153,8 +156,8 @@ standard filler/decap cells required to meet density rules.*
 
 Explore the layout interactively:
 
-- **3D viewer:** `https://gds-viewer.tinytapeout.com/?model=https://mena-emil.github.io/tt-crc8-lfsr/tinytapeout.oas&pdk=ihp-sg13g2`
-- **GDS explorer (2D, layer-by-layer):** `https://gds-explorer.tinytapeout.com/viewer?file=https://mena-emil.github.io/tt-crc8-lfsr/tinytapeout.oas&pdk=ihp-sg13g2`
+- **3D viewer:** [gds-viewer.tinytapeout.com](https://gds-viewer.tinytapeout.com/?model=https://mena-emil.github.io/tt-crc8-lfsr/tinytapeout.oas&pdk=ihp-sg13g2)
+- **GDS explorer (2D, layer-by-layer):** [gds-explorer.tinytapeout.com](https://gds-explorer.tinytapeout.com/viewer?file=https://mena-emil.github.io/tt-crc8-lfsr/tinytapeout.oas&pdk=ihp-sg13g2)
 
 ## Project info
 
